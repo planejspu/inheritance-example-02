@@ -9,7 +9,7 @@
 using std::string;
 using std::stringstream;
 //
-float pi = 3.14; 
+const double PI = 3.14159; 
 
 Circle::Circle(double r) 
 {
@@ -18,10 +18,10 @@ Circle::Circle(double r)
 
 double Circle::Area()const{
 	  
-	return pow(radius,2)*pi;  
+	return pow(radius,2)*PI;  
 }
 double Circle::Perimeter()const{
-	return 2*pi*radius;
+	return 2*PI*radius;
 }
 string Circle::ToString()const{
 	stringstream retVal;
