@@ -11,10 +11,11 @@ private:
 	double radius; 
 
 public:
-	double area() ; 
-	void setRadius(double r); 
-	double getRadius(); 
-	double circumference(); 
+	Circle (double r); 
+
+	virtual double Area()const;
+	virtual double Perimeter()const;
+	virtual string ToString()const;
 	
 };
 

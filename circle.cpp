@@ -11,28 +11,23 @@ using std::stringstream;
 //
 float pi = 3.14; 
 
-double Circle::area() 
+Circle::Circle(double r) 
 {
-	return pi * radius * radius ; 
+       radius=r; 	
 } 
 
-void Circle::setRadius(double r) 
-{ 
-	if (r >= 0)
-		radius = r; 
-	else
-		radius = 0; 
-} 
-
-double Circle::getRadius() 
-{ 
-	return radius; 
-} 
-
-double Circle::circumference() 
-{ 
-	return 2 * pi * radius; 
-} 
+double Circle::Area()const{
+	  
+	return pow(pi*radius,2);  
+}
+double Circle::Perimeter()const{
+	return 2*pi*radius;
+}
+string Circle::ToString()const{
+	stringstream retVal;
+	retVal << Shape::ToString() << ": Circle: {radius : " << radius <<  "}";
+	return retVal.str();
+}
 
 
 
