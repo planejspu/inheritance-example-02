@@ -18,7 +18,7 @@ Circle::Circle(double r)
 
 double Circle::Area()const{
 	  
-	return pow(pi*radius,2);  
+	return pow(radius,2)*pi;  
 }
 double Circle::Perimeter()const{
 	return 2*pi*radius;
